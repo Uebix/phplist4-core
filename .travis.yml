@@ -61,6 +61,11 @@ script:
 
 - >
   echo;
+  echo "Running the system tests";
+  vendor/bin/phpunit Tests/System/;
+
+- >
+  echo;
   echo "Running the static analysis";
   vendor/bin/phpstan analyse -l 5 bin/ Classes/ Tests/ web/;
 
